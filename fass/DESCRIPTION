@@ -1,0 +1,33 @@
+Package: fass
+Type: Package
+Title: Fast Approximate Stochastic Search for Spike-and-Slab Variable Selection
+Version: 0.1.0
+Authors@R:
+    person("Jacob", "Fontana", email = "jacob.a.fontana@gmail.com",
+           role = c("aut", "cre"))
+Description: Scalable Bayesian variable selection for linear regression with
+    very large sample sizes and misspecified (M-open) model spaces. Implements
+    Fast Approximate Stochastic Search (FASS), a model search that scores
+    candidate models with a first-order surrogate for the posterior odds under
+    continuous Gaussian, Laplace, or Student-t spike-and-slab priors. After a
+    one-time pre-computation each search iteration costs O(p), independent of
+    the sample size. Student-t spikes and slabs are robust to model
+    superinduction, the tendency of posterior odds to favour ever larger models
+    as n grows when no candidate model is correct. Selected models can be
+    followed by post-hoc posterior inference via block or mean-field
+    variational Bayes, expectation propagation, Laplace approximation, or
+    Gibbs sampling. Standard, partially collapsed, and skinny Gibbs samplers
+    (Narisetty, Shen and He (2019) <doi:10.1080/01621459.2018.1482754>) are
+    included as benchmarks, along with posterior predictive scoring (CRPS).
+License: GPL (>= 3)
+Encoding: UTF-8
+RoxygenNote: 7.2.1
+LinkingTo: Rcpp
+Imports:
+    Rcpp,
+    MASS,
+    stats,
+    utils
+Suggests:
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3

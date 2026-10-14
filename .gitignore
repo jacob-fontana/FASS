@@ -1,0 +1,12 @@
+.Rproj.user/
+.Rhistory
+.RData
+*.Rproj
+fass/src/*.o
+fass/src/*.so
+fass/src/*.dll
+simulations/results/
+simulations/figures/
+simulations/check_output/
+simulations/check_log.txt
+simulations/run_checks.*
